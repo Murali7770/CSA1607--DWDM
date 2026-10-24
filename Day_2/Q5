@@ -1,0 +1,8 @@
+data(AirPassengers)
+
+hist(AirPassengers,
+     breaks = c(100, 250, 400, 550, 700),
+     main = "Histogram of AirPassengers",
+     xlab = "Passengers",
+     ylab = "Frequency",
+     xlim = c(100, 700))
