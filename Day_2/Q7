@@ -1,0 +1,18 @@
+install.packages("HSAUR")
+library(HSAUR)
+data(water)
+# Scatter plot
+plot(water$hardness,
+     water$mortality,
+     main = "Mortality vs Hardness",
+     xlab = "Hardness",
+     ylab = "Mortality",
+     pch = 19)
+# Regression line
+model <- lm(mortality ~ hardness, data = water)
+abline(model)
+# Display model
+summary(model)
+# Predict mortality for hardness = 88
+newdata <- data.frame(hardness = 88)
+predict(model, newdata)
