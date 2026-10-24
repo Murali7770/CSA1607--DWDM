@@ -1,0 +1,12 @@
+data(mtcars)
+
+matplot(mtcars[, c("mpg", "qsec")],
+        type = "l",
+        lty = 1,
+        xlab = "Observation",
+        ylab = "Value",
+        main = "MPG and QSEC")
+
+legend("topright",
+       legend = c("MPG", "QSEC"),
+       lty = 1)
