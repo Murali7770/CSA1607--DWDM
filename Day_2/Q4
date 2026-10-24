@@ -1,0 +1,14 @@
+# Min-Max normalization example
+min <- 50000
+max <- 100000
+v <- 80000
+normalized <- (v - min) / (max - min)
+print(normalized)
+# Given data
+data <- c(200, 300, 400, 600, 1000)
+# Min-Max normalization
+minmax <- (data - min(data)) / (max(data) - min(data))
+print(minmax)
+# Z-score normalization
+zscore <- (data - mean(data)) / sd(data)
+print(zscore)
